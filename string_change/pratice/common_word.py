@@ -1,0 +1,2 @@
+print('common_word')
+
