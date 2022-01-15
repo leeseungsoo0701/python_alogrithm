@@ -21,3 +21,5 @@ def long_panlindromic(str):
 long_panlindromic("babad")
 
 #######################################
+def₩
+
