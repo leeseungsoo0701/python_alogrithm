@@ -36,7 +36,7 @@ class Solution:
                         right -= 1
                     left += 1
                     right -= 1
-        return answer
+        return print(answer)
 
 
 
