@@ -17,17 +17,14 @@ def commonWord(paragraph : str, banned: list[str]) -> str:
         if  word == banned[0]:
             pass
         elif '.' in word or ',' in word:
-            word[:-1]
+            word = word[:-1]
+            new_lists.append(word)
         else:
             new_lists.append(word)
-            print(new_lists)
 
     count_p = Counter(new_lists)
     print(count_p)
     print(count_p.most_common(1)[0][0])
-
-
-
 
 paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
 banned = ["hit"]
