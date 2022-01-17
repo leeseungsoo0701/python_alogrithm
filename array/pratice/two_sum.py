@@ -17,3 +17,26 @@ def twoSum(nums: list[int], target: int)->list[str]:
 nums = [2,7,11,15]
 target = 9
 twoSum(nums,target)
+
+##################
+
+
+def twoSumTwoPoint(nums: list[int], target: int)->list[str]:
+    print(nums)
+    print(type(target))
+    nums.sort()
+    left, right = 0, len(nums)-1
+
+    while left < right:
+        if nums[left] + nums[right] < target:
+            left +=1
+        elif nums[left] + nums[right] > target:
+            right -=1
+        else:
+            return [left,right]
+
+
+
+nums = [2,7,11,15]
+target = 9
+print(twoSumTwoPoint(nums,target))

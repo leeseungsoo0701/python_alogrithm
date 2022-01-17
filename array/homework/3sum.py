@@ -31,21 +31,20 @@ class Solution:
                     # 중복연산 제거를 위해 left, right값 추가이동
 
                     # 같은 것이 두 번 들어갈 수도 있으므로 left나 right가
-                    # while left < right and nums[left] == nums[left + 1]:
-                    #     left += 1
-                    # while left < right and nums[right] == nums[right - 1]:
-                    #     right -= 1
+                    while left < right and nums[left] == nums[left + 1]:
+                        left += 1
+                    while left < right and nums[right] == nums[right - 1]:
+                        right -= 1
 
                     left += 1
                     right -= 1
 
-        for lists in answer:
-            lists = sorted(lists)
+        # for lists in answer:
+        #     lists = sorted(lists)
+        #
+        # result = list(map(list,(set(map(tuple, answer)))))
 
-        result = list(map(list,(set(map(tuple, answer)))))
-
-
-        return print(result)
+        return print(answer)
 
 
 
