@@ -22,3 +22,17 @@ class Stack:
 
     def is_empty(self):
         return self.top is None
+
+
+class Queue:
+    def __init__(self):
+        self.front = None
+
+    def push(self, value):
+        pass
+
+    def pop(self):
+        pass
+
+    def is_empty(self):
+        return

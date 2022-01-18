@@ -3,7 +3,7 @@
 
 
 
-from stack_queue.structures import Stack
+from stack_queue.stack.structures import Stack
 def is_valid(s):
     pair = {
         '}' : '{',

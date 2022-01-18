@@ -5,8 +5,6 @@
 ##### 2.그 뒤의 배열을 넣는다 (언제? 현재 인덱스보다 온도가 낮을 시, 이떄 count도 늘려준다)
 ##### 3.현재의 값보다 큰 값이 나올 때, stack을 초기화 시켜주면서 count를 새로운 리스트에 넣어준다(같은 인덱스 값)
 
-from stack_queue.structures import Stack
-
 
 # def is_warm(warms : list[int]) -> list[int]:
 #     stack = Stack()

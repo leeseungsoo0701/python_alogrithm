@@ -1,6 +1,6 @@
 ################ 먼저 들어간 놈이 나온다
 ######## 넣는 놈 node
-from stack_queue.structures import Node, Stack
+from stack_queue.stack.structures import Node, Stack
 
 
 def test_node():
