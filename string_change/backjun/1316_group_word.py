@@ -32,9 +32,10 @@ for i in range(num):
         if word[j] == word[j+1]:
             pass
 
-        ## 뒤에서 앞의 문자를 확인하는 것이 아닌 앞에서 뒤에 남은 것들 중 하나라도 있으면 이제 결과에서 하나를 뺀다.
+        ## 뒤에서 앞의 문자를 확인하는 것이 아닌 앞에서 뒤에 남은 것들 중 하나라도 있으면 이제 결과에서 하나를 뺀다. 그리고 그 즉시 break해서 빠져나온다.
         elif word[j] in word[j+1:]:
             result -=1
+            break
 
 
 print(result)
