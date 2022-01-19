@@ -11,6 +11,7 @@ while len(queue) > 1:
     queue.popleft()
     queue.append(queue.popleft())
 
+
 print(queue.pop())
 
 
