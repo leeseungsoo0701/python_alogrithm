@@ -16,6 +16,7 @@ def topK(nums : list[int], k:int)->list[int]:
 
     # counter를 활용한 딕셔너리 생성
     count_answer = Counter(nums)
+    print(count_answer)
 
     ## set을 한번 해줘서 중복값 제거
     set_nums = list(set(nums))
@@ -32,6 +33,6 @@ def topK(nums : list[int], k:int)->list[int]:
 
 
 nums = [1,1,1,2,2,3,3,3,3]
-k = 5
+k = 2
 print(topK(nums,k))
 

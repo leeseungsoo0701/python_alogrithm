@@ -11,6 +11,9 @@ b: 1           start  0  answer 1
 b: 2           start  2  answer 2
 a :3           start  2
 
+
+
+abcac
 아이디어:
 """
 
@@ -33,3 +36,26 @@ def withoutRepeat(S:str)->int:
 
 S = "abbbbbabcded"
 print(withoutRepeat(S))
+
+#######################################
+def withoutRepeat(S1: str) -> int:
+    check = []
+    count = 0
+    length = 0
+    for word in S1:
+        if word not in check:
+            check.append(word)
+            count +=1
+        else:
+            length = max(count,length)
+            count = 0
+            check = []
+
+    return length
+
+
+
+
+
+S1 = "abcabcbb"
+print(withoutRepeat(S1))

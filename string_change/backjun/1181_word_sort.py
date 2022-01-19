@@ -52,10 +52,10 @@ for i in range(words_num):
     word = str(input())
 
     ## 길이가 짧은 순이므로 같이 입력 받는다
-    word_count = len(word)
+    word_len = len(word)
 
     ## 그 다음 결과리스트에 글자와 글자 길이를 넣어놓는다.
-    words_list.append((word, word_count))
+    words_list.append((word, word_len))
 
 ## 중복 제거를 위한 set해주고 다시 list화 시킨다.
 words_list = list(set(words_list))
