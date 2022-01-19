@@ -1,4 +1,4 @@
-from stack_queue.stack.structures import Queue
+from stack_queue.leetcode.structures import Queue
 
 
 def test_queue():

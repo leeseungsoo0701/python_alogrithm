@@ -3,7 +3,7 @@
 
 
 
-from stack_queue.stack.structures import Stack
+from stack_queue.leetcode.structures import Stack
 def is_valid(s):
     pair = {
         '}' : '{',
