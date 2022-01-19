@@ -1,2 +1,0 @@
-print('common_word')
-
