@@ -17,7 +17,7 @@ def solution(bridge_length, weight, truck_weights):
         total +=temp
         if total > weight:
             queue.popleft()
-            total =
+            total = 0
         else:
             queue.popleft()
             answer+=1
