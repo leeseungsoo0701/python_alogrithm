@@ -29,8 +29,10 @@ stack = []
 answer = [-1]*num
 
 for i in range(len(nums)):
-    while stack and nums[stack[-1]] < nums[i]:
+    temp = nums[i]
+    while stack and nums[stack[-1]] < temp:
         answer[stack.pop()] = nums[i]
+
     stack.append(i)
 
 

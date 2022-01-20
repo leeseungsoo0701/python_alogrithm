@@ -36,7 +36,7 @@ for i in range(num):
     while stack and nums[stack[-1]] < temp:
         stack.pop()
 
-    # 현재 남은 탑보다 가장 높지는 않은데 stack에 뭐가 남아있다면 그 탑으로 수신하는 것이다 (번쨰이므로 +1)을 해주자
+    # 현재 남은 탑보다 가장 높지는 않은데 stack에 뭐가 남아있다면 그 탑으로 수신하는 것이다 (번째이므로 +1)을 해주자
     if stack:
         answer[i] = stack[-1] + 1
 
