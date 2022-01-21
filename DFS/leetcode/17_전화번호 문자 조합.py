@@ -1,18 +1,22 @@
-def dfs_phone_num(digits:str )->list[str]:
-    dic = {"2": "abc", "3": "def", "4": "ghi", "5": "jkl", "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"}
+def letterCombinations(input: str):
+    def dfs(deep, stack):
+        if len(stack) == len(input):
+            result.append(stack)
+            return
 
-    if digits == "":
+
+        for j in dic[input[deep]]:
+            dfs(deep+1,stack+j)
+        return
+
+
+    if not input:
         return []
 
+    dic = {"2": "abc", "3": "def", "4": "ghi", "5": "jkl", "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"}
+    result = []
+    dfs(0, "")
 
-    numbers = list(dic[digits[0]])   #[a,b,c]
+    return result
 
-    for digit in digits[1:]:
-
-
-input = "23"
-path = ""
-dic = {"2": "abc", "3": "def", "4": "ghi", "5": "jkl", "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"}
-
-
-dfs_phone_num(input,path)
+print(letterCombinations("236"))
