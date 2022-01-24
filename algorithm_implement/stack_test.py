@@ -1,6 +1,6 @@
 ################ 먼저 들어간 놈이 나온다
 ######## 넣는 놈 node
-from algorithm_avatar.stack_implement import Node, Stack
+from algorithm_implement.stack_implement import Node, Stack
 
 
 def test_node():
