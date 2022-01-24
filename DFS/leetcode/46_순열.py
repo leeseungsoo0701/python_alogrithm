@@ -36,3 +36,8 @@ def permutatuions(nums : list[str])->list[list[int]]:
 
 nums = [1,2,3]
 print(permutatuions(nums))
+
+
+
+#######################################
+
