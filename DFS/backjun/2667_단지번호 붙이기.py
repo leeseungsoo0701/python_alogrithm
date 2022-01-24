@@ -1,32 +1,34 @@
-N = int(input())
+n = int(input())
+graph = []
+for _ in range(n):
+    graph.append(list(map(int, input())))
 
-arr = [list(map(int, input().split())) for _ in range(N)]
-result = []
+grp = []
+cnt = 0
+dx = [-1, 1, 0, 0]  # 상하좌우
+dy = [0, 0, -1, 1]
 
-def dfs_recursie(node, visited):
-    dx = [0,0,1,-1]
-    dy = [1,-1,0,0]
 
-    rows, cols = N , N
-    count = 0
+def dfs(x, y):
+    global cnt
+    if x < 0 or x >= n or y < 0 or y >= n:  # 범위
+        return False
 
-    for row in range(rows):
-        for col in range(cols):
-            if arr[row][col] != '1':
-                continue
+    if graph[x][y] == 1:
+        cnt += 1
+        graph[x][y] = 0
+        for i in range(4):
+            dfs(x + dx[i], y + dy[i])
+        return True
 
-            count += 1
 
-            stack = [(row,col)]
+for i in range(n):
+    for j in range(n):
+        if dfs(i, j) == True:
+            grp.append(cnt)
+            cnt = 0
 
-            while stack:
-                x, y = stack.pop()
-                arr[x][y] = '0'
-                for i in range(4):
-                    nx = x + dx[i]
-                    ny = y + dy[i]
-
-                    if nx < 0 or nx >=rows or ny>=cols or arr[nx][ny] != '1':
-                        continue
-                    stack.append((nx,ny))
-        return count
+print(len(grp))
+grp.sort()
+for i in grp:
+    print(i)
