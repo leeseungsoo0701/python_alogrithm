@@ -14,9 +14,6 @@ from collections import deque
 from idlelib.tree import TreeNode
 
 
-
-
-
 count = 0
 def maxDepth(root:TreeNode)-> int:
     global count
@@ -25,7 +22,6 @@ def maxDepth(root:TreeNode)-> int:
 
     while queue:
         count +=1
-
 
         for _ in range(len(queue)):
             front = queue.popleft()
@@ -36,14 +32,6 @@ def maxDepth(root:TreeNode)-> int:
 
 
     return count
-
-
-print(maxDepth(root))
-
-
-
-
-
 
 
 

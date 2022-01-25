@@ -15,12 +15,12 @@ class Solutions:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         def dfs(node: TreeNode):
             if not node:
-                return -1
+                return 0
 
             left = dfs(node.left)
             right = dfs(node.right)
 
-            self.longest = max(self.longest, left + right + 2)
+            self.longest = max(self.longest, left + right)
 
             return max(left, right) + 1
 
