@@ -16,8 +16,8 @@ dy = [1, -1, 0, 0]
 
 
 def dfs_numberPad(x, y):
-    global answer
-    global count
+    global answer  ### 수정
+    global count   ### 수정
 
     if count == 6:
         count = 0

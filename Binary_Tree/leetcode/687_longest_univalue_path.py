@@ -28,7 +28,19 @@ class Solution:
 
             if node.right.val ==node.val:
                 right +=1
-            else:class Solution:
+            else:
+                right = 0
+
+            self.result = max(self.result, left + right)
+
+            return max(left, right)
+
+        dfs(root)
+        return self.result
+
+
+################################################
+class Solution:
     result : int = 0
 
     def longstUnivalue(self, root : TreeNode )->int:
