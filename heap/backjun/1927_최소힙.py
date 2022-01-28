@@ -34,11 +34,11 @@
 5. return result를 하여 for문을 통해 하나씩 결과가 나오도록 설계한다.
 """
 import heapq
-
+import sys
 N = int(input())
 nums = []
 for i in range(N):
-    nums.append(int(input()))
+    nums.append(int(sys.stdin.readline()))
 
 
 def min_heap(lists: list[int]):

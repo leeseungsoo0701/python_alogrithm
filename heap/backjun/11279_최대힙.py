@@ -34,16 +34,16 @@
 """
 
 import heapq
+import sys
 
 N = int(input())
 nums = []
 
 for _ in range(N):
-    nums.append(int(input()))
+    nums.append(int(sys.stdin.readline()))
 
 
-
-def max_heap(nums : list[int]):
+def max_heap(nums: list[int]):
     heap = []
     result = []
     for num in nums:
@@ -60,7 +60,6 @@ def max_heap(nums : list[int]):
 
 
 max_heap_list = max_heap(nums)
-
 
 for heap_num in max_heap_list:
     print(heap_num)
