@@ -17,17 +17,13 @@ def max_heap(inputs : list[int], k: int)->int:
 
     for n in inputs:
         heapq.heappush(heap, n)
-
     # print(heap)
 
-    sorted_heap = sorted(heap,reverse=True)
-
+    sorted_heap = sorted(heap, reverse=True)
 
     # print(sorted_heap)
 
     return sorted_heap[k-1]
-
-
 
 
 inputs = [3,2,3,1,2,4,5,5,6]
@@ -37,6 +33,7 @@ print(max_heap(inputs,k))
 
 
 #############################################
+# 블로그 풀이 
 # def findKthLargest(nums: list[int], k: int)-> int:
 #     heap = list()
 #     for n in nums:
@@ -54,6 +51,7 @@ print(max_heap(inputs,k))
 
 
 ################################################
+# 정민님 풀이
 
 # import heapq    # heapq.heappop - 가장 작은 원소 삭제
 #

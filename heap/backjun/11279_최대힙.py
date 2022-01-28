@@ -60,6 +60,5 @@ def max_heap(nums: list[int]):
 
 
 max_heap_list = max_heap(nums)
-
 for heap_num in max_heap_list:
     print(heap_num)

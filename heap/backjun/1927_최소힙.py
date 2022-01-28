@@ -58,6 +58,5 @@ def min_heap(lists: list[int]):
 
 
 min_heap_list = min_heap(nums)
-
 for heap_num in min_heap_list:
     print(heap_num)
