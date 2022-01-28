@@ -33,8 +33,12 @@
 4. 전체 입력 받을 수를 먼저 입력 받고 결과에 해당하는 리스트(result)를 따로 생성 , 결과 값을 result에 append한다.
 5. return result를 하여 for문을 통해 하나씩 결과가 나오도록 설계한다.
 """
+
+
 import heapq
 import sys
+
+# 입력 받기
 N = int(input())
 nums = []
 for i in range(N):
@@ -44,13 +48,19 @@ for i in range(N):
 def min_heap(lists: list[int]):
     heap = []
     result = []
+
+    ## lists에 해당하는 값들에 있어 판별 후 result에 값을 넣어준다.
     for idx, num in enumerate(lists):
+
+        # num == 0 이고 heap에 아무것도 없다면 0을 append 한다.
         if num == 0 and not heap:
             result.append(0)
 
+        # num == 0 이지만 heap이 존재한다면 heap 중에 가장 작은 값을 result에 넣어준다.
         if num == 0 and heap:
             result.append(heapq.heappop(heap))
 
+        #num이 0이 아니라면 heap에 push 해준다.
         if num != 0:
             heapq.heappush(heap, num)
 
