@@ -45,7 +45,7 @@ else:
     # 그러면 이제 K+1 즉 두번째로 큰 숫자까지 엮어서 한번에 계산해준다 마치 원래 같은 식구였던 것처럼
     for _ in range(cycle):
         result = result + max_num*K
-        result = result + second_num
+        result = result + second_num*1
         M = M - (K+1)
 
     ## 딱 나누어떨어지면 어차피 M이 0이므로 result에 더해질 것이 없지만 남은 짤짤이가 있다면 무조건 max_num을 곱해줘야
