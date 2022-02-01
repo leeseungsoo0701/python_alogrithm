@@ -5,11 +5,9 @@
 #6
 #1 3 5 6 7 10
 
-N = int(input())
-# M = [i for i in range(1, N + 1)]
-# # print(M)
+N = 6 #int(input())
 
-nums = list(map(int, input().split()))
+nums = [1,3,5,6,7,10] # list(map(int, input().split()))
 total = sum(nums)
 
 res = "NO"
@@ -17,19 +15,21 @@ res = "NO"
 def DFS(level: int, sub_sum: int, idx: int):
     global res
 
+    if level == N or total/2 <= sub_sum:
+        return
+
     if res == "YES":
-        return
+        return res
 
-    if level == N:
-        return
-
-    if total - sub_sum == sub_sum:
+    if sub_sum*2 == total:
         res = "YES"
         return
 
     for i in range(idx, N):
         return DFS(level + 1, sub_sum + nums[i], i + 1)
 
+
+DFS(0,0,0)
 
 if res == "YES":
     print("YES")
