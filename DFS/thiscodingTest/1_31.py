@@ -35,3 +35,31 @@ if res == "YES":
     print("YES")
 else:
     print("NO")
+
+
+
+#############################################
+cnt = int(input())
+numbers = list(map(map(int, input().split())))
+accum = sum(numbers)
+flag = False
+
+def dfs(L, res):
+    global flag
+
+    if flag == True:
+        return True
+
+    if L ==cnt or res > accum // 2:
+        if accum - res == res:
+            flag = True
+            return True
+        return False
+
+    return dfs(L+1, res+numbers[L])+dfs(L+1, res)
+
+result = dfs(0, 0)
+if result:
+    print("YES")
+else:
+    print("NO")
