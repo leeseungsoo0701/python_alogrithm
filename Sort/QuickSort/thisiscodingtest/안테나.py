@@ -25,6 +25,8 @@ result = sorted(result, key=lambda minimum:minimum[1])
 #인덱스를 출력해야하므로 가장 처음의 0을 출력한다.
 print(result[0][0])
 
+##########################################################
+
 
 
 

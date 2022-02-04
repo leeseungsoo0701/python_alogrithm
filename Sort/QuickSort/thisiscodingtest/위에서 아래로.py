@@ -22,7 +22,7 @@ for i in range(N):
             nums.append(temp_bottom)
             nums.append(temp_top)
 
-print(nums)
+print(" ".join(list(nums)))
 
 
 
