@@ -26,6 +26,7 @@ def BSearch(stack_nums: list[int], know_nums: list[int]) -> list[str]:
     #글로벌 변수로 가져온다.
     global start
     global end
+
     # 값이 있으면 yes 문자열로 바꿔줘서 넣어준다.
     res = ''
 

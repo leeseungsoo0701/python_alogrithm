@@ -22,7 +22,7 @@ for i in range(N):
 
     #0이 아니라면 바이러스이므로 (1,1)부터 시작이므로 i와 j에 +1씩 해줘서 가독성 좋게 넣어주자
     for j in range(N):
-        if graph[i][j] != 0:
+        if graph[i][j]:
             result.append((i + 1, j + 1, graph[i][j], 0))
 
 # 바이러스의 숫자 기준으로 정렬해준다.
@@ -40,7 +40,6 @@ dy = [0, 0, 1, -1]
 #BFS로 풀이한다 왜? 1,2,3이 한번에 옮겨져야하므로
 def BFS(S: int, X: int, Y: int) -> int:
     queue = deque(result)
-
 
     while queue:
         # 하나씩 다 뽑고

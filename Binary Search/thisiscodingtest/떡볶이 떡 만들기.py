@@ -21,6 +21,7 @@ def BSearch_rice(N: int, M: int, nums: list[int]) -> int:
         answer = start
 
         while start < end:
+
             if total - N * answer < M:
                 return answer + 1
             elif total - N * answer == M:
