@@ -10,18 +10,30 @@
 
 N, C = map(int,input().split())
 
-result = []
+array = []
 
 for _ in range(N):
-    result.append(int(input()))
+    array.append(int(input()))
 
-result.sort()
+array.sort()
 
-min_num = result[0]
-max_num = result[-1]
 
-len_result = max_num-min_num
+def wifi(N:int,C:int,array:list[int]->int:
 
-title = round(len_result/C)
 
-print(title)
+
+
+
+
+1            10000 10001 10002
+
+5001
+
+print(wifi(N,C,array))
+
+
+
+
+
+
+

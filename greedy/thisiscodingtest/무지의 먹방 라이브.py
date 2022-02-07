@@ -44,3 +44,13 @@ def mukbang(food_times: list[int], K: int) -> int:
 
 
 print(mukbang(food_times, K))
+
+
+
+############################################################
+K = int(input())
+food_times = list(map(int, input().split()))
+
+array = []
+
+
