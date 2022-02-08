@@ -1,6 +1,6 @@
 from prometheus_client.utils import INF
 import heapq
-from collections import defaultdict
+
 
 N, K = 4, 2
 times = [[2, 1, 1], [2, 3, 1], [3, 4, 1]]

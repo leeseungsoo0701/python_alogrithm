@@ -31,11 +31,10 @@ def NetworkDelay(times: list[list[int]], N: int, K: int) -> int:
     while Q:
         startNode_to_currNode_time, currNode = heapq.heappop(Q)
 
-        # 한 번도 방문한 적이 없다면 지금 방문하는 순간이 무조건 최소값이다
+        # 한 번도 방문한 적이 없다면 지금 방문하는 순간이 무조건 최소값이다.
         # 왜? -> heapq를 사용했기에 거리가 짧은 순으로 정렬되며 도착노드를
         # 처음 방문 시의 값이 가장 최솟값이라고 자명하게 말할 수 있다.
         # 방문한 적이 없다면 딕셔너리 형태로 현재 노드까지의 시간을 넣어준다.
-
         if currNode not in dist:
             dist[currNode] = startNode_to_currNode_time    # <= startNode_to_endNode_time
 
